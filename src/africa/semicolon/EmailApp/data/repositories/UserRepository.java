@@ -1,12 +1,12 @@
-package data.repositories;
+package africa.semicolon.EmailApp.data.repositories;
 
-import data.model.User;
+import africa.semicolon.EmailApp.data.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
-
-import java.util.List;
 
 public interface UserRepository extends MongoRepository<User, String> {
     User findByUsername(String username);
+
+    User findByEmailAddress(String email);
 //    User save(User user);
 //
 //    User findById(int id);

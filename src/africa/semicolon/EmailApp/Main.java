@@ -1,19 +1,16 @@
-import controller.MailController;
-import controller.UserController;
-import dtos.requests.MailRequest;
-import dtos.requests.RegisterRequest;
+package africa.semicolon.EmailApp;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import javax.swing.*;
-
-
+@EnableMongoRepositories
+@SpringBootApplication
 public class Main {
 
 
     public static void main(String[] args) {
-//        SpringApplication.run(Main.class, args);
+        SpringApplication.run(Main.class, args);
 
 //        startApp();
     }

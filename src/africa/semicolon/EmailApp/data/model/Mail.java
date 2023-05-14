@@ -1,4 +1,4 @@
-package data.model;
+package africa.semicolon.EmailApp.data.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -11,6 +11,7 @@ public class Mail {
     @Id
     private  String mailId;
     private String senderName;
+    private String senderEmail;
     private String recipientName;
     private String recipientEmailAddress;
     private String mailTitle;

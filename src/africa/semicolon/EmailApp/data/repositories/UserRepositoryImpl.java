@@ -1,6 +1,6 @@
-//package data.repositories;
+//package africa.semicolon.EmailApp.data.repositories;
 //
-//import data.model.User;
+//import africa.semicolon.EmailApp.data.model.User;
 //
 //import java.util.ArrayList;
 //import java.util.List;

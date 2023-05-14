@@ -1,4 +1,4 @@
-package africa.semicolon.EmailApp.responses;
+package africa.semicolon.EmailApp.dtos.responses;
 
 import africa.semicolon.EmailApp.data.model.Mail;
 import lombok.Data;

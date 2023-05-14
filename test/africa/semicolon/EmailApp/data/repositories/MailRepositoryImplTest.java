@@ -1,8 +1,7 @@
-package data.repositories;
+package africa.semicolon.EmailApp.data.repositories;
 
-import data.model.Mail;
+import africa.semicolon.EmailApp.data.model.Mail;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

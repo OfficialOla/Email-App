@@ -1,9 +1,9 @@
-package utils;
+package africa.semicolon.EmailApp.utils;
 
-import data.model.Mail;
-import data.model.User;
-import dtos.requests.MailRequest;
-import dtos.requests.RegisterRequest;
+import africa.semicolon.EmailApp.data.model.Mail;
+import africa.semicolon.EmailApp.data.model.User;
+import africa.semicolon.EmailApp.dtos.requests.SendEmailRequest;
+import africa.semicolon.EmailApp.dtos.requests.RegisterRequest;
 
 public class Mapper {
     public static User map(RegisterRequest registerRequest) {
@@ -23,12 +23,11 @@ public class Mapper {
 //        user.setEmailAddress(registerRequest.getEmailAddress());
 //        user.setDateOfBirth(registerRequest.getDateOfBirth());
 //    }
-    public static void mapMailRequestToMail(MailRequest response, Mail mail){
-        mail.setMailBody(response.getMailBody());
-        mail.setMailTitle(response.getMailTitle());
-        mail.setTimeCreated(response.getTimeCreated());
+    public static void mapMailRequestToMail(SendEmailRequest response, Mail mail){
+        mail.setMailBody(response.getMessage());
+        mail.setMailTitle(response.getSubject());
+//        mail.setTimeCreated(response.getTimeCreated());
         mail.setSenderName(response.getSenderName());
-        mail.setRecipientName(response.getRecipientName());
-        mail.setRecipientEmailAddress(response.getRecipientEmailAddress());
+        mail.setRecipientEmailAddress(response.getRecipientEmail().toString());
     }
 }

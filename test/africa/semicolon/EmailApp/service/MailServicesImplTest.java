@@ -1,7 +1,7 @@
-package africa.semicolon.EmailApp.services;
+package africa.semicolon.EmailApp.service;
 
 import africa.semicolon.EmailApp.data.model.Mail;
-import africa.semicolon.EmailApp.dtos.requests.MailRequest;
+import africa.semicolon.EmailApp.dtos.requests.SendEmailRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,17 +10,17 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MailServicesImplTest {
-    private MailServices mailServices;
+    private MailService mailServices;
     private RegisterRequest registerRequest;
-    private MailRequest mailResponse;
+    private SendEmailRequest mailResponse;
 
     private Mail mail;
     @BeforeEach
     public void setMail(){
-        mailServices = new MailServicesImpl();
+        mailServices = new MailServiceImpl();
         mail = new Mail();
-        mailResponse.setMailBody("Election is tomorrow");
-        mailResponse.setMailTitle("Election update");
+        mailResponse.setMessage("Election is tomorrow");
+        mailResponse.setSubject("Election update");
         mailResponse.setRecipientName("John");
         mailResponse.setSenderName("Olayinka");
         mailResponse.setTimeCreated(LocalDateTime.now());
